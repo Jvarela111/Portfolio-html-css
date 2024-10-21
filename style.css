@@ -1,6 +1,7 @@
 /* Global Styles */
 html, body {
     height: 100%;
+    width: 100%;
     margin: 0;
     font-family: Arial, sans-serif;
 }
@@ -59,55 +60,7 @@ html, body {
     width: auto;
 }
 
-/* Responsive Styles */
-@media (max-width: 1400px) {
-    .container-home {
-        height: 500px;
-    }
 
-    .title-name {
-        font-size: 6vh;
-    }
-
-    .pillar img {
-        max-height: 400px;
-    }
-}
-
-@media (max-width: 950px) {
-    .container-home {
-        grid-template-columns: 1fr;
-        grid-template-rows: auto auto auto;
-        height: auto;
-    }
-
-    .title-container {
-        grid-column: 1;
-        margin: 20px 0;
-    }
-
-    .title-name {
-        font-size: 5vh;
-    }
-
-    .pillar img {
-        max-height: 300px;
-    }
-}
-
-@media (max-width: 600px) {
-    .title-name {
-        font-size: 4vh;
-    }
-
-    .title-description {
-        font-size: 3vh;
-    }
-
-    .pillar img {
-        max-height: 200px;
-    }
-}
 
 
 h2 {
@@ -225,6 +178,15 @@ hr {
     padding-bottom: 50px;
 }
 
+.code-languages{
+    display: flex;
+    align-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+
 /* Skills Text */
 h3 {
     font-family: 'Courier New', Courier, monospace;
@@ -267,13 +229,6 @@ h3 {
     color: #003C43;
 }
 
-.code-languages{
-    display: flex;
-    align-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-    justify-content: center;
-}
 
 /* Estilos para la galería de proyectos */
  .project-gallery {
@@ -413,3 +368,79 @@ h3 {
     text-decoration: underline;
 }
 
+/* Responsive Styles */
+@media (max-width: 1400px) {
+    .container-home {
+        height: 500px;
+    }
+
+    .title-name {
+        font-size: 6vh;
+    }
+
+    .pillar img {
+        max-height: 400px;
+    }
+}
+
+@media (max-width: 950px) {
+    .container-home {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto auto auto;
+        height: auto;
+    }
+
+    .title-container {
+        grid-column: 1;
+        margin: 20px 0;
+    }
+
+    .title-name {
+        font-size: 5vh;
+    }
+
+    .pillar img {
+        max-height: 300px;
+    }
+}
+
+@media (max-width: 600px) {
+    .title-name {
+        font-size: 4vh;
+    }
+
+    .title-description {
+        font-size: 3vh;
+    }
+
+    .pillar img {
+        max-height: 200px;
+    }
+
+    .parent > .gaming-image > img, .parent > .laptop > img{
+        height: 130px;
+
+    }
+
+    .parent{
+        display: flex;
+        flex-direction: column;
+        margin: 0px;
+        width: 75%;
+    }
+
+    .skills {
+        display: flex;
+        flex-direction: column;
+        margin: 0px;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .project-item{
+        width: 75%;
+    }
+
+
+    
+}
