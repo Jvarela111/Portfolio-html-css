@@ -1,0 +1,255 @@
+/* Global Styles */
+html, body {
+    height: 100%;
+    margin: 0;
+}
+
+/* Variables for Reusable Colors (Optional) */
+:root {
+    --background-color: #E3FEF7;
+    --primary-color: #77B0AA;
+    --text-color: #003C43;
+    --border-color: #ddfdf5;
+}
+
+/* Home Container */
+.container-home {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background-color: var(--background-color);
+    height: 750px;
+    flex-wrap: wrap;
+}
+
+/* Title Styles */
+.title-name {
+    font-family: "Pacifico", cursive;
+    font-size: 9vh;
+    font-weight: 400;
+    color: var(--primary-color);
+    margin: 0;
+    order: 1;
+}
+
+.title-description {
+    order: 2;
+}
+
+/* Heading 2 Styles */
+h2 {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 4vh;
+    font-weight: 600;
+    color: var(--primary-color);
+    word-spacing: 5px;
+    margin-top: 0px;
+    padding: 5vh 0;
+}
+
+/* Pillar Styles */
+.pillar1, .pillar2 {
+    padding-top: 50px;
+    height: 600px;
+}
+
+.pillar1 {
+    align-self: flex-start;
+    order: 0;
+}
+
+.pillar2 {
+    align-self: flex-end;
+    order: 4;
+}
+
+/* Middle Container */
+.container-middle {
+    padding-top: 10vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.my-photo {
+    height: 200px;
+    border-radius: 50%;
+    margin-bottom: 20px;
+}
+
+/* Middle Container Text */
+.container-middle p {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 2vh;
+    color: var(--text-color);
+    line-height: 1.8;
+    margin: 0px auto 30px auto;
+}
+
+/* Horizontal Rule */
+hr {
+    border: 6px dotted var(--border-color);
+    border-bottom: none;
+    width: 4%;
+    margin: 60px auto;
+}
+
+/* Education Timeline Styling */
+.education-timeline {
+    position: relative;
+    max-width: 800px;
+    margin: auto;
+    padding: 40px 0;
+    text-align: left;
+}
+
+/* Timeline Item */
+.timeline-item {
+    position: relative;
+    padding-left: 40px;
+    margin-bottom: 20px;
+}
+
+/* Connector Line */
+.timeline-item::before {
+    content: '';
+    position: absolute;
+    left: 20px;
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    background-color: #77B0AA;
+}
+
+/* Timeline Circle */
+.timeline-item::after {
+    content: '';
+    position: absolute;
+    left: 14px;
+    top: 8px;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: #77B0AA;
+}
+
+/* Timeline Content */
+.timeline-content {
+    background-color: #E3FEF7;
+    padding: 15px 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    font-size: 2vh;
+    color: #003C43;
+}
+
+/* Timeline Date */
+.timeline-date {
+    font-weight: bold;
+    color: #135D66;
+    font-size: 2vh;
+    margin-bottom: 5px;
+}
+
+
+/* Skills Section */
+.parent {
+    display: grid;
+    grid-template-columns: 0.5fr 1fr;
+    grid-template-rows: repeat(1, 1fr);
+    width: 50%;
+    margin: 50px auto 0 auto;
+    text-align: left;
+    column-gap: 2rem;
+    row-gap: 3rem;
+    padding-bottom: 50px;
+}
+
+/* Skills Text */
+h3 {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 2.5vh;
+    font-weight: bold;
+    color: #135D66;
+    margin: 0;
+}
+
+
+/* Work Experience Styling */
+.work-experience {
+    max-width: 800px;
+    margin: auto;
+    padding: 40px 0;
+    text-align: left;
+}
+
+
+/* Job Card */
+.job-card {
+    border-left: 4px solid #77B0AA;
+    padding: 15px 20px;
+    margin-bottom: 20px;
+    background-color: #E3FEF7;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Job Card Text */
+.job-card h3 {
+    font-size: 2.5vh;
+    margin: 0;
+    color: #003C43;
+}
+
+.job-card p {
+    font-size: 2vh;
+    margin: 5px 0;
+    color: #003C43;
+}
+
+.code-languages{
+    display: flex;
+    align-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+/* Estilos para la galería de proyectos */
+ .project-gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+    gap: 20px;
+    max-width: 1000px;
+    margin: 0px auto;
+    padding: 40px 20px;
+    justify-items: center;
+    
+}
+
+/* Estilos para cada elemento del proyecto */
+ .project-item {
+    position: relative;
+    cursor: pointer;
+    overflow: hidden;
+    padding: 25px 0 25px;
+    transition: transform 0.3s ease-in-out;
+}
+
+/* Imagen del proyecto */
+.project-item img {
+    width: 100%;
+    height: auto;
+    padding-top: 30px;
+    transition: transform 0.3s ease-in-out;
+}
+
+/* Efecto de ampliación al pasar el cursor */
+.project-item:hover {
+    transform: scale(1.2);
+    z-index: 1; /* Asegura que el elemento en hover quede al frente */
+}
