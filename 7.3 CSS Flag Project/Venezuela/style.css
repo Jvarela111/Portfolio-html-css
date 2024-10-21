@@ -1,0 +1,133 @@
+.flag{
+    position: relative;
+    width: 900px;
+    height: 600px;
+    border: 1px solid transparent;
+  }
+  div.yellow{
+    background-color: rgb(236, 252, 20);
+    height: 200px;
+    position: absolute;
+    width: 100%;
+  }
+
+  div.blue{
+    background-color: rgb(35, 20, 252);
+    height: 200px;
+    top: 200px;
+    position: absolute;
+    width: 100%;
+  }
+
+  div.red{
+    background-color: rgb(241, 68, 15);
+    height: 200px;
+    top: 400px;
+    position: absolute;
+    width: 100%;
+  }
+
+  .stars {
+    position: relative;
+    top: 25px;
+    left: 260px;
+    height: 150px;
+    width: 380px;
+  }
+
+  #star-parts {
+    margin: 50px 0;
+    position: relative;
+    display: block;
+    color: rgb(255, 255, 255);
+    width: 3px;
+    height: 3px;
+    border-right: 20px solid transparent;
+    border-bottom: 14px solid rgb(255, 255, 255);
+    border-left: 20px solid transparent;
+    transform: rotate(35deg);
+  }
+  #star-parts:before {
+    border-bottom: 16px solid rgb(255, 255, 255);
+    border-left: 6px solid transparent;
+    border-right: 6px solid transparent;
+    position: absolute;
+    top: -9px;
+    left: -13px;
+    display: block;
+    content: '';
+    transform: rotate(-35deg);
+  }
+  #star-parts:after {
+    position: absolute;
+    display: block;
+    color: rgb(255, 255, 255);
+    top: 1px;
+    left: -22px;
+    width: 3px;
+    height: 3px;
+    border-right: 20px solid transparent;
+    border-bottom: 14px solid rgb(255, 255, 255);
+    border-left: 20px solid transparent;
+    transform: rotate(-70deg);
+    content: '';
+  }
+
+  div div.firstStar{
+    position: absolute;
+    top: 72px;
+    left: 0px;
+  }
+
+  div div.secondStar{
+    position: absolute;
+    top: 25px;
+    left: 35px;
+    rotate: 25deg;
+  }
+
+  div div.thirdStar{
+    position: absolute;
+    top: -15px;
+    left: 84px;
+    rotate: 36deg;
+  }
+
+  div div.fourthStar{
+    position: absolute;
+    top: -38px;
+    left: 140px;
+    rotate: 57deg;
+  }
+
+  div div.fifthStar{
+    position: absolute;
+    top: -38px;
+    left: 210px;
+    rotate: 90deg;
+  }
+
+  div div.sixthStar{
+    position: absolute;
+    top: -15px;
+    left: 260px;
+    rotate: 107deg;
+  }
+
+  div div.seventhStar{
+    position: absolute;
+    top: 25px;
+    left: 305px;
+    rotate: 120deg;
+  }
+
+  div div.eighthStar{
+    position: absolute;
+    top: 72px;
+    left: 340px;
+    rotate: 0deg;
+  }
+
+  
+
+
