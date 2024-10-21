@@ -2,9 +2,10 @@
 html, body {
     height: 100%;
     margin: 0;
+    font-family: Arial, sans-serif;
 }
 
-/* Variables for Reusable Colors (Optional) */
+/* Variables for Reusable Colors */
 :root {
     --background-color: #E3FEF7;
     --primary-color: #77B0AA;
@@ -14,31 +15,101 @@ html, body {
 
 /* Home Container */
 .container-home {
-    display: flex;
-    flex-direction: column;
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
     align-items: center;
-    justify-content: center;
     text-align: center;
     background-color: var(--background-color);
     height: 750px;
-    flex-wrap: wrap;
+    padding: 20px;
+    gap: 20px;
+}
+
+/* Title Container */
+.title-container {
+    grid-column: 2;
 }
 
 /* Title Styles */
 .title-name {
     font-family: "Pacifico", cursive;
-    font-size: 9vh;
+    font-size: 8vh;
     font-weight: 400;
     color: var(--primary-color);
     margin: 0;
-    order: 1;
 }
 
 .title-description {
-    order: 2;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 4vh;
+    font-weight: 600;
+    color: var(--primary-color);
+    margin: 10px 0 0;
 }
 
-/* Heading 2 Styles */
+/* Pillar Styles */
+.pillar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.pillar img {
+    max-height: 600px;
+    width: auto;
+}
+
+/* Responsive Styles */
+@media (max-width: 1400px) {
+    .container-home {
+        height: 500px;
+    }
+
+    .title-name {
+        font-size: 6vh;
+    }
+
+    .pillar img {
+        max-height: 400px;
+    }
+}
+
+@media (max-width: 950px) {
+    .container-home {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto auto auto;
+        height: auto;
+    }
+
+    .title-container {
+        grid-column: 1;
+        margin: 20px 0;
+    }
+
+    .title-name {
+        font-size: 5vh;
+    }
+
+    .pillar img {
+        max-height: 300px;
+    }
+}
+
+@media (max-width: 600px) {
+    .title-name {
+        font-size: 4vh;
+    }
+
+    .title-description {
+        font-size: 3vh;
+    }
+
+    .pillar img {
+        max-height: 200px;
+    }
+}
+
+
 h2 {
     font-family: 'Courier New', Courier, monospace;
     font-size: 4vh;
@@ -49,21 +120,6 @@ h2 {
     padding: 5vh 0;
 }
 
-/* Pillar Styles */
-.pillar1, .pillar2 {
-    padding-top: 50px;
-    height: 600px;
-}
-
-.pillar1 {
-    align-self: flex-start;
-    order: 0;
-}
-
-.pillar2 {
-    align-self: flex-end;
-    order: 4;
-}
 
 /* Middle Container */
 .container-middle {
@@ -253,3 +309,107 @@ h3 {
     transform: scale(1.2);
     z-index: 1; /* Asegura que el elemento en hover quede al frente */
 }
+
+.about-me-section {
+    max-width: 1000px;
+    margin: 40px auto;
+    padding: 20px;
+    text-align: center;
+    background-color: #E3FEF7;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.profile-photo {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    object-fit: cover;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.about-content {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.text-content {
+    max-width: 600px;
+    text-align: left;
+}
+
+/* Styles for the contact section */
+.contact-me {
+    text-align: center;
+    margin: 0px auto;
+}
+
+/* Styles for the button */
+.contact-button {
+    background-color: #77B0AA;
+    color: #fff;
+    text-decoration: none;
+    padding: 15px 30px;
+    font-size: 1.2em;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+    cursor: pointer;
+}
+
+.contact-me p {
+    font-size: 1.2em;
+    margin-bottom: 50px;
+}
+
+/* Hover effect */
+.contact-button:hover {
+    background-color: #135D66;
+}
+
+/* Styles for the footer */
+.footer {
+    margin-top: 50px;
+    background-color: #135D66;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+    font-size: 1em;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+/* Footer content */
+.footer-content {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Social media links */
+.footer .social-media a {
+    color: #77B0AA;
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+/* Hover effect for social media links */
+.footer .social-media a:hover {
+    color: #ddfdf5;
+}
+
+/* Contact email styling */
+.footer a {
+    color: #77B0AA;
+    text-decoration: none;
+}
+
+/* Hover effect for contact email */
+.footer a:hover {
+    text-decoration: underline;
+}
+
